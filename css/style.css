@@ -13,9 +13,6 @@ header h1 {position: absolute; top:-670px; left: 0px; width: 150px; z-index: 999
 header h1 img {width: 100%; }
 header h2 {display: none;}
 
-.headerVisual {background: #000; width: 100%; height: 700px; overflow: hidden;}
-.headerVisual video {width: 100%;}
-
 header .menu {position: relative; top:-50px;   }
 header .menu li {float: left; }
 header .menu a{font: bold 18px/50px "Karla"; color:#000; margin-right: 3px; background: #fff; display: block; width: 150px; height: 50px; transition: all 0.5s;}
@@ -56,16 +53,63 @@ body>a {height: 40px; width: 40px; box-shadow: 0 2px 10px 1px rgba(0,0,0,0.12); 
 /*모바일 비쥬얼*/
 .visualMo {display: none;}
 
+/*슬라이더 프레임*/
+#slider1 { width:100%; height:700px; border:1px solid #000; box-sizing:border-box; position:relative; overflow:hidden;}
 
-/*2번째 슬라이드*/
-.bxslider li{position:relative; overflow:hidden; height:544px; width:1057px;}
-.bxslider li .slide_txt{position:absolute; top:50%; margin-top:-150px; left:50%; margin-right:-410px;  width:430px; height:350px;  text-align: right;}
-.bxslider li .slide_txt h6{position:relative; top:0; left:0; color:#2d2d2d; font-family: Times; font-size:18px; font-weight:100;}
-.bxslider li .slide_txt h4{position:relative; top:25px; left:3px; color:#000; font-family: Times; font-size:36px;}
-.bxslider li .slide_txt .border2{position:absolute; top:110px; right:0px;  width:50px; height:7px; background:#2D2D2D;}
-.bxslider li .slide_txt p{position:relative; top:80px; left:0; color:#666; font-size:14px;}
-.bxslider li .slide_txt a{position:absolute; display:block; top:205px; right: 0;  width: 100px; border: solid 1px #666; text-align: center; padding: 7px; color:#666; transition: all 0.5s;}
-.bxslider li .slide_txt a:hover {background: #2d4e3e; color:#fff;}
+/*슬라이더 패널*/
+.panel {width:100%; height:100%; top:0px; left:0px;}
+.panel>li {width:100%; height:100%; position:absolute; top:0px; left:100%;}
+.panel>li.on {left:0%;}
+.panel>li.panel1 {background:lightgreen;}
+.panel>li.panel2 {background:pink;}
+.panel>li.panel3 {background:lightblue;}
+.panel>li.panel4 {background:violet;}
+
+/*네비 버튼*/
+.navi {position:absolute; bottom:20px; left:50%; margin-left:-60px;}
+.navi>li {float:left; margin-right:10px;}
+.navi>li>a {display:block; width:20px; height:20px; border-radius:10px; background:#fff;}
+.navi>li>a.on {background:#000;}
+
+
+/*이전,다음 버튼*/
+.next {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; right:20px;}
+.prev {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; left:20px;}
+
+
+
+/*슬라이더 프레임*/
+#slider2 { height:544px; width:1057px; border:1px solid #000; box-sizing:border-box; margin:100px auto; position:relative; overflow:hidden;}
+
+/*슬라이더 패널*/
+.panel2 {width:100%; height:100%; top:0px; left:0px;}
+.panel2>li {width:100%; height:100%; position:absolute; top:0px; left:100%;  }
+.panel2>li .slide_txt{position:absolute; top:50%; margin-top:-150px; left:50%; margin-right:-410px;  width:430px; height:350px;  text-align: right;}
+.panel2>li .slide_txt h6{position:relative; top:0; left:0; color:#2d2d2d; font-family: Times; font-size:18px; font-weight:100;}
+.panel2>li .slide_txt h4{position:relative; top:25px; left:3px; color:#000; font-family: Times; font-size:36px;}
+.panel2>li .slide_txt .border2{position:absolute; top:110px; right:0px;  width:50px; height:7px; background:#2D2D2D;}
+.panel2>li .slide_txt p{position:relative; top:80px; left:0; color:#666; font-size:14px;}
+.panel2>li .slide_txt a{position:absolute; display:block; top:205px; right: 0;  width: 100px; border: solid 1px #666; text-align: center; padding: 7px; color:#666; transition: all 0.5s;}
+.panel2>li .slide_txt a:hover {background: #2d4e3e; color:#fff;}
+
+/*네비 버튼*/
+.navi2 {position:absolute; bottom:20px; left:50%; margin-left:-60px;}
+.navi2>li {float:left; margin-right:10px;}
+.navi2>li>a {display:block; width:20px; height:20px; border-radius:10px; background:#fff;}
+.navi2>li>a.on {background:#000;}
+
+
+/*이전,다음 버튼*/
+.next2 {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; right:20px;}
+.prev2 {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; left:20px;}
+
+/*정지,재생 버튼*/
+.toggle2 { width:80px; height:25px; position:absolute; bottom:20px; left:20px;}
+.toggle2>a {display:block; width:100%; height:100%; font:12px/25px "orbitron"; color:#fff; text-align:center; position:absolute; top:0px; left:0px; }
+.toggle2>a.stop {background:red; display:none; }
+.toggle2>a.start {background:blue; }
+
+
 
 /*content*/
 .content {width:940px; margin: 0 auto; overflow: hidden;}
@@ -278,7 +322,7 @@ header.sub h2 {display: none;}
 header {width: 90%; }
 header h1 {position: absolute; top:-370px; left: 0px;}
 
-.headerVisual {height: 400px;}
+#slider1 {height: 400px;}
 
 .util {position: absolute; top:-370px; right: 0px;}
 .util li {float: left; }
@@ -287,7 +331,7 @@ header h1 {position: absolute; top:-370px; left: 0px;}
 /*모바일 비쥬얼*/
 .visualMo {display: none;}
 /*2번째 슬라이드*/
-.slider {display: none;}
+#slider2 {display: none;}
 
 /*content*/
 .content {width:90%;}
@@ -408,9 +452,9 @@ header .gnb{display: none;}
     
     
 /*1번째 슬라이드*/
-.headerVisual {display: none;}
+#slider1 {display: none;}
 /*2번째 슬라이드*/
-.slider {display: none;}
+#slider2 {display: none;}
 
 
 /*content*/

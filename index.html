@@ -12,27 +12,49 @@
     <meta name="keywords" content="Land Rover, Range Rover, Discovery, Car">
     <meta name="author" content="JiHyun Lee">
     <meta name="robots" content="index, follow">
-    	
-	<link rel="stylesheet" href="css/style.css" />	
-	<link rel="stylesheet" href="css/reset.css" />	
-    <link rel="stylesheet" href="css/jquery.bxslider.css">
-	
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>	
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>	
-    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>	
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
+
 <body>
     <a href="#" id="Move_Top">TOP</a>
     <a href="#" id="Side_Menu"><i class="fas fa-ellipsis-v"></i></a>
 
     <div class="headerWrap">
-    <div class="headerVisual">
-        
-    </div>
-            
+        <div id="slider1">
+            <ul class="panel">
+                <li class="panel1 on">01</li>
+                <li class="panel2">02</li>
+                <li class="panel3">03</li>
+                <li class="panel4">04</li>
+            </ul>
+
+            <ul class="navi">
+                <li><a href="#" class="on"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+
+            <div class="btnSet">
+                <a href="#" class="prev"></a>
+                <a href="#" class="next"></a>
+            </div>
+            <div class="toggle">
+                <a href="#" class="start">start</a>
+                <a href="#" class="stop">stop</a>
+            </div>
+
+
+        </div>
+
         <header>
             <h1><a href="index.html"><img src="img/logo.png" alt="랜드로버 로고"></a></h1>
             <h2><a href="index.html"><img src="img/logo_mo.png" alt="랜드로버 모바일 로고"></a></h2>
@@ -54,32 +76,31 @@
             </div>
         </header>
     </div>
-    
+
     <div class="visual">
-       <div class="visualMo">
-           <img src="img/visual_mo.png" alt="모바일 메인 프로모션 이미지">
-           <div class="visualMoTxt">
+        <div class="visualMo">
+            <img src="img/visual_mo.png" alt="모바일 메인 프로모션 이미지">
+            <div class="visualMoTxt">
                 <h6>RANGE ROVER</h6>
                 <H4>Smart Promotion</H4>
                 <div class="border2"></div>
                 <p>현금 구매 시 , LONG LIFE ENGINE OIL COUPON<br>24개월 거치형 유예 할부 + 더블 FMS쿠폰 등<br/>다양한 혜택을 만나보세요</p>
                 <a href="#" class="view">More View</a>
             </div>
-       </div>
+        </div>
         <div></div>
-        <div class="slider">
-            <ul class="bxslider">
-                <li><img src="img/promo1.png"  alt="프로모션 이미지1"/>
-                  <div class="slide_txt">
-                    <h6>Smart Promotion</h6>
-                    <H4>NEW RANGE ROVER</H4>
-                    <div class="border2"></div>
-                    <p>24개월 현금구매시 1.9% 초저금리 할부 혜택<br>
-                        현금 구매시 더블 FMS 쿠폰증정</p>
-                    <a href="#" class="view">More View</a>
-                  </div>
+        <div id="slider2">
+            <ul class="panel2">
+                <li class="pane21 on"><img src="img/promo1.png" alt="프로모션 이미지1" />
+                    <div class="slide_txt">
+                        <h6>Smart Promotion</h6>
+                        <H4>NEW RANGE ROVER</H4>
+                        <div class="border2"></div>
+                        <p>24개월 현금구매시 1.9% 초저금리 할부 혜택<br> 현금 구매시 더블 FMS 쿠폰증정</p>
+                        <a href="#" class="view">More View</a>
+                    </div>
                 </li>
-                <li><img src="img/promo2.png"  alt="프로모션 이미지2"/>
+                <li class="pane22"><img src="img/promo2.png" alt="프로모션 이미지2" />
                     <div class="slide_txt">
                         <h6>Smart Promotion</h6>
                         <H4>RANGE ROVER SPORT</H4>
@@ -89,203 +110,220 @@
                     </div>
                 </li>
             </ul>
+            <div class="btnSet2">
+                <a href="#" class="prev2"></a>
+                <a href="#" class="next2"></a>
+            </div>
+
+            <div class="toggle2">
+                <a href="#" class="start2">start</a>
+                <a href="#" class="stop2">stop</a>
+            </div>
         </div>
     </div>
-        <div class="content">
-            <div class="con1">
-                <div class="con11">
-                    <video loop="loop" preload="auto">
+    <div class="content">
+        <div class="con1">
+            <div class="con11">
+                <video loop="loop" preload="auto">
                         <source src="img/vid1.mp4" type="video/mp4" />
                     </video>
-                    <div>
-                        <h3>NEW RANGE ROVER</h3>
-                        <p>궁극의 Range Rover</p>
-                        <a href="#">More View</a>
-                    </div>
+                <div>
+                    <h3>NEW RANGE ROVER</h3>
+                    <p>궁극의 Range Rover</p>
+                    <a href="#">More View</a>
                 </div>
-                <div class="con12">
-                    <video loop="loop" preload="auto">
+            </div>
+            <div class="con12">
+                <video loop="loop" preload="auto">
                         <source src="img/vid2.mp4" type="video/mp4" />
                     </video>
-                    <div>
-                        <h3>RANGE ROVER SPORT</h3>
-                        <p>역동적인 Range Rover </p>
-                        <a href="#">More View</a>
+                <div>
+                    <h3>RANGE ROVER SPORT</h3>
+                    <p>역동적인 Range Rover </p>
+                    <a href="#">More View</a>
+                </div>
+            </div>
+        </div>
+        <div class="con2">
+            <div class="con21">
+                <a href="#">
+                    <div class="con211">
+                        <div></div>
                     </div>
-                </div>
-            </div>
-            <div class="con2">
-                <div class="con21">
-                    <a href="#">
-                        <div class="con211">
-                            <div></div>
-                        </div>
                     RANGE ROVER EVOQUE
-                    </a>
-                </div>
-                <div class="con22">
-                    <a href="#">
-                        <div class="con221">
-                            <div></div>
-                        </div>
+                </a>
+            </div>
+            <div class="con22">
+                <a href="#">
+                    <div class="con221">
+                        <div></div>
+                    </div>
                     DISCOVERY
-                    </a>
-                </div>
-                <div class="con23">
-                    <a href="#">
-                        <div class="con231">
-                            <div></div>
-                        </div>
+                </a>
+            </div>
+            <div class="con23">
+                <a href="#">
+                    <div class="con231">
+                        <div></div>
+                    </div>
                     DISCOVERY SPORT
-                    </a>
-                </div>
+                </a>
             </div>
         </div>
-        <div class="con3 parallax-window" data-parallax="scroll" data-image-src="img/con4_bg.jpg" data-position-x="right">
-            <div>
-                <h3>FIND YOUR NEAREST DEALERSHIP</h3>
-                <div class="border2"></div>
-                <p>전문적인 상담과 지원 서비스를 위하여<br/>
-가장 가까운 랜드로버 전시장을 방문해 주세요.</p>
-           <a href="#">전시장 방문하기</a>
-            </div>
+    </div>
+    <div class="con3 parallax-window" data-parallax="scroll" data-image-src="img/con4_bg.jpg" data-position-x="right">
+        <div>
+            <h3>FIND YOUR NEAREST DEALERSHIP</h3>
+            <div class="border2"></div>
+            <p>전문적인 상담과 지원 서비스를 위하여<br/> 가장 가까운 랜드로버 전시장을 방문해 주세요.</p>
+            <a href="#">전시장 방문하기</a>
         </div>
-        <div class="con4">
-               <ul>
-                   <li>
-                        <a href="#" class="con41">
+    </div>
+    <div class="con4">
+        <ul>
+            <li>
+                <a href="#" class="con41">
                             <img src="img/con41_car.png" alt="나만의 랜드로버 아이콘 이미지">
                             <h3>나만의 랜드로버</h3>
                             <p>나만의 특별한 랜드로버를<br/> 완성해 보세요.</p>
                         </a>
-                   </li>
-                   <li>
-                        <a href="#" class="con42">
+            </li>
+            <li>
+                <a href="#" class="con42">
                             <img src="img/con42_car_sell.png" alt="랜드로버 온라인 구매 아이콘 이미지">
                             <h3>랜드로버 온라인 구매</h3>
                             <p>랜드로버 모델을 온라인으로<br/> 쉽고 빠르게 구매하세요.</p>
                         </a>
-                   </li>
-                   <li>
-                        <a href="#" class="con43">
+            </li>
+            <li>
+                <a href="#" class="con43">
                             <img src="img/con43_deiver.png" alt="시승신청 아이콘 이미지">
                             <h3>시승신청</h3>
                             <p>가까운 랜드로버 전시장에서<br/> 시승 신청을 문의해 주세요.</p>
                         </a>
-                   </li>
-                   <li>
-                        <a href="#" class="con44">
+            </li>
+            <li>
+                <a href="#" class="con44">
                             <img src="img/con44_email.png" alt="랜드로버 소식 받기 아이콘 이미지">
                             <h3>랜드로버 소식 받기</h3>
                             <p>랜드로버의 최신 소식을 <br/>가장 먼저 확인해 보세요.</p>
                         </a>
-                   </li>
-               </ul>
-        </div>
-        <div class="content">
-            <div class="con5">
-                <div class="con51">
-                    <h2>NOTICE</h2>
-                    <div class="con511">
-                        <div><img src="img/notice_1.png" alt="공지 첫번째 글 이미지"></div>
-                        <div>
-                            <span>2015.11.06</span>
-                            <p>랜드로버 홈페이지가 리뉴얼 되었습니다.</p>
-                        </div>
-                    </div>
-                    <div class="con512">
-                        <div><img src="img/notice_2.png" alt="공지 두번째 글 이미지"></div>
-                        <div>
-                            <span>2015.11.06</span>
-                            <p>새로운 프로모션 출시</p>
-                        </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="con5">
+            <div class="con51">
+                <h2>NOTICE</h2>
+                <div class="con511">
+                    <div><img src="img/notice_1.png" alt="공지 첫번째 글 이미지"></div>
+                    <div>
+                        <span>2015.11.06</span>
+                        <p>랜드로버 홈페이지가 리뉴얼 되었습니다.</p>
                     </div>
                 </div>
-                
-                <div class="con52">
-                    <h2>NEWS</h2>
-                    <div class="con521">
-                        <div>
-                            <span>2015.11.06</span>
-                            <p>랜드로버, 올해의 우수 브랜드 수상</p>
-                        </div>
-                        <div><img src="img/news_1.png" alt="뉴스 첫번째 글 이미지"></div>
-                    </div>
-                    <div class="con522">
-                        <ul>
-                            <li>올해의 베스트 랜드로버 <span>2015.11.03</span></li>
-                            <li>랜드로버 차량 추가금 안내문<span>2015.11.03</span></li>
-                            <li>올해의 판매량 급등 원인<span>2015.11.03</span></li>
-                        </ul>
+                <div class="con512">
+                    <div><img src="img/notice_2.png" alt="공지 두번째 글 이미지"></div>
+                    <div>
+                        <span>2015.11.06</span>
+                        <p>새로운 프로모션 출시</p>
                     </div>
                 </div>
             </div>
+
+            <div class="con52">
+                <h2>NEWS</h2>
+                <div class="con521">
+                    <div>
+                        <span>2015.11.06</span>
+                        <p>랜드로버, 올해의 우수 브랜드 수상</p>
+                    </div>
+                    <div><img src="img/news_1.png" alt="뉴스 첫번째 글 이미지"></div>
+                </div>
+                <div class="con522">
+                    <ul>
+                        <li>올해의 베스트 랜드로버 <span>2015.11.03</span></li>
+                        <li>랜드로버 차량 추가금 안내문<span>2015.11.03</span></li>
+                        <li>올해의 판매량 급등 원인<span>2015.11.03</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footerWrap">
-        
-    <footer>
-       <div class="fcon1">
-            <div class="map">
-                <ul>
-                    <li><h3>About Us</h3></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Networks</a></li>
-                    <li><a href="#">IR</a></li>
-                    <li><a href="#">CI</a></li>
-                </ul>
-                <ul>
-                    <li><h3>Business</h3></li>
-                    <li><a href="#">Steel Library</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Sustainablity</a></li>
-                </ul>
-                <ul>
-                    <li><h3>People</h3></li>
-                    <li><a href="#">CEO</a></li>
-                    <li><a href="#">Persona</a></li>
-                    <li><a href="#">Life</a></li>
-                    <li><a href="#">Recruit</a></li>
-                </ul>
-                <ul>
-                    <li><h3>Frameworks</h3></li>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">Solution</a></li>
-                    <li><a href="#">Case Study</a></li>
-                </ul>
+
+        <footer>
+            <div class="fcon1">
+                <div class="map">
+                    <ul>
+                        <li>
+                            <h3>About Us</h3>
+                        </li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Networks</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">CI</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Business</h3>
+                        </li>
+                        <li><a href="#">Steel Library</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Sustainablity</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>People</h3>
+                        </li>
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">Persona</a></li>
+                        <li><a href="#">Life</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Frameworks</h3>
+                        </li>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Solution</a></li>
+                        <li><a href="#">Case Study</a></li>
+                    </ul>
+                </div>
+                <div class="footerMenu">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">이메일 무단 수집 거부</a></li>
+                        <li><a href="#">개인정보 취급방침</a></li>
+                    </ul>
+
+                </div>
             </div>
-            <div class="footerMenu">
-               <ul>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">찾아오시는길</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">이메일 무단 수집 거부</a></li>
-                    <li><a href="#">개인정보 취급방침</a></li>
-                </ul>
-                
+            <!--footer con1-->
+            <div class="fcon2">
+                <h2><img src="img/footer_logo.png" alt="푸터 랜드로버 로고"></h2>
+                <p>© Jaguar Land Rover Limited <br/>서울시 중구 수하동 67(중구 을지로5길 26) 미래에셋센터원빌딩 동관 13층 재규어 랜드로버 코리아</p>
+
+                <a href="#" class="familySite">FAMILYSITE</a>
             </div>
-       </div><!--footer con1-->
-        <div class="fcon2">
-            <h2><img src="img/footer_logo.png" alt="푸터 랜드로버 로고"></h2>
-            <p>© Jaguar Land Rover Limited <br/>서울시 중구 수하동 67(중구 을지로5길 26) 미래에셋센터원빌딩 동관 13층 재규어 랜드로버 코리아</p>
-            
-            <a href="#" class="familySite">FAMILYSITE</a>
-        </div>
-    </footer>
+        </footer>
     </div>
     <div id="menuMo">
-	    <h3><img src="img/logo_mo.png" alt="모바일 메뉴 아이콘"></h3>
-	    <ul class="menuMo">
-                <li><a href="story.html">STORY</a></li>
-                <li><a href="community.html">COMMUNITY</a></li>
-                <li><a href="#">PRODUCT</a></li>
-            </ul>
-            <ul class="utilMo">
-                <li><a href="login.html">로그인</a></li>
-                <li><a href="join.html">회원가입</a></li>
-            </ul>
-	</div>
+        <h3><img src="img/logo_mo.png" alt="모바일 메뉴 아이콘"></h3>
+        <ul class="menuMo">
+            <li><a href="story.html">STORY</a></li>
+            <li><a href="community.html">COMMUNITY</a></li>
+            <li><a href="#">PRODUCT</a></li>
+        </ul>
+        <ul class="utilMo">
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </ul>
+    </div>
 </body>
 </html>
 
