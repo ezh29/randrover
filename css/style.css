@@ -3,6 +3,8 @@
 
 
 .h {position:absolute; top:-99999px; opacity:0; text-indent:-99999px;}
+.fadeinbottom { opacity:0; top:20px; position: relative;}
+
 
 
 /*메인페이지--------------------------------------------------------------------*/
@@ -16,14 +18,10 @@ header h2 {display: none;}
 header .menu {position: relative; top:-50px;   }
 header .menu li {float: left; }
 header .menu a{font: bold 18px/50px "Karla"; color:#000; margin-right: 3px; background: #fff; display: block; width: 150px; height: 50px; transition: all 0.5s;}
+header .menu li:nth-of-type(1) a {width: 50px; font-size: 23px;}
 header .menu li:nth-last-of-type(1) {text-align: left;  }
-header .menu li:nth-last-of-type(1) a {width: 250px; padding-left: 30px; background: #9fceb7;}
-header .menu li a:hover {background: #2d4e3e; color: #fff;}
-
-header .util {position: absolute; top:-670px; right: 0px;}
-header .util li {float: left; }
-header .util a{font: bold 15px/1 'Nanum Gothic', sans-serif; color:#ddd; display: block; margin-left: 15px; }
-
+header .menu li:nth-last-of-type(1) a {width: 250px; padding-left: 30px; background: #2d4e3e; color:#fff;}
+header .menu li a:hover {background: #9fceb7; color: #000;}
 
 
 /*모바일메뉴*/
@@ -54,16 +52,22 @@ body>a {height: 40px; width: 40px; box-shadow: 0 2px 10px 1px rgba(0,0,0,0.12); 
 .visualMo {display: none;}
 
 /*슬라이더 프레임*/
-#slider1 { width:100%; height:700px; border:1px solid #000; box-sizing:border-box; position:relative; overflow:hidden;}
+#slider1 { width:100%; height:700px; box-sizing:border-box; position:relative; overflow:hidden;}
 
 /*슬라이더 패널*/
 .panel {width:100%; height:100%; top:0px; left:0px;}
 .panel>li {width:100%; height:100%; position:absolute; top:0px; left:100%;}
 .panel>li.on {left:0%;}
-.panel>li.panel1 {background:lightgreen;}
-.panel>li.panel2 {background:pink;}
-.panel>li.panel3 {background:lightblue;}
-.panel>li.panel4 {background:violet;}
+.panel>li.panel1 {background: url('../img/slider_bg_1.png')no-repeat center; background-size : cover;}
+.panel>li.panel2 {background: url('../img/slider_bg_2.png')no-repeat center; background-size : cover;}
+.panel>li.panel3 {background: url('../img/slider_bg_3.png')no-repeat center; background-size : cover;}
+
+#slider1 .slide_txt{ line-height:18px; color:#fff; position:relative; top:240px; left:20%; }
+#slider1 .slide_txt h2::before {content:""; display: block; position:relative; top:-30px; left:0; width:70px; height:4px; background:#2d4e3e;  }
+#slider1 .slide_txt h2{font-family: Times, serif; line-height:18px; color:#2d4e3e; position:relative; top:27px; left:0; font-weight:bold; letter-spacing:-2px; font-size:46px;}
+#slider1 .slide_txt p{font-size:18px; line-height:28px; color:#f1f1f1; position:relative; top:64px; left:0; font-family: 'Nanum Gothic', sans-serif;font-weight:500; text-shadow:1px 1px #111; }
+#slider1 .slide_txt a{position:relative; top:90px; left:0; display:inline-block; border:1px solid #fff; padding:7px 20px; border-radius:30px; font:16px/1.7 'Nanum Gothic', sans-serif; color:#fff; text-shadow:1px 1px #111;}
+
 
 /*네비 버튼*/
 .navi {position:absolute; bottom:20px; left:50%; margin-left:-60px;}
@@ -73,21 +77,22 @@ body>a {height: 40px; width: 40px; box-shadow: 0 2px 10px 1px rgba(0,0,0,0.12); 
 
 
 /*이전,다음 버튼*/
-.next {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; right:20px;}
-.prev {display:block; width:20px; height:100px; background:#000; position:absolute; top:50%; margin-top:-50px; left:20px;}
+.btnSet {position:absolute; top:50%; right:5px; transform: rotate(-90deg); }
+.btnSet a {font: 16px/2 "Karla"; color:#fff;}
+.prev::after {content: ""; display: inline-block; height: 1px; width: 20px; background: #fff; margin: 3px 3px 3px 5px; }
 
 
 
 /*2번째 슬라이드*/
 /*슬라이더 프레임*/
-#slider2 { height:544px; width:1057px; border:1px solid #000; box-sizing:border-box; margin:100px auto; position:relative;}
+#slider2 { height:544px; width:1057px; box-sizing:border-box; margin:100px auto; position:relative;}
 
 /*슬라이더 패널*/
 .bxslider li{position:relative; overflow:hidden; height:544px; width:1057px;}
 .bxslider li .slide_txt{position:absolute; top:50%; margin-top:-150px; left:50%; margin-right:-410px;  width:430px; height:350px;  text-align: right;}
 .bxslider li .slide_txt h6{position:relative; top:0; left:0; color:#2d2d2d; font-family: Times; font-size:18px; font-weight:100;}
 .bxslider li .slide_txt h4{position:relative; top:25px; left:3px; color:#000; font-family: Times; font-size:36px;}
-.bxslider li .slide_txt .border2{position:absolute; top:110px; right:0px;  width:50px; height:7px; background:#2D2D2D;}
+.bxslider li .slide_txt h4::after {content:""; display: block; position:absolute; top:65px; right:0px;  width:50px; height:7px; background:#2D2D2D;}
 .bxslider li .slide_txt p{position:relative; top:80px; left:0; color:#666; font-size:14px;}
 .bxslider li .slide_txt a{position:absolute; display:block; top:205px; right: 0;  width: 100px; border: solid 1px #666; text-align: center; padding: 7px; color:#666; transition: all 0.5s;}
 .bxslider li .slide_txt a:hover {background: #2d4e3e; color:#fff;}
@@ -142,7 +147,7 @@ body>a {height: 40px; width: 40px; box-shadow: 0 2px 10px 1px rgba(0,0,0,0.12); 
 .con3>div {width: 400px; height: 250px; margin:0 auto; background: #fff; padding: 30px; text-align: center; position: relative; top:80px;}
 
 .con3>div h3{position:relative; top:15px; left:3px; color:#000; font-family: Times; font-size:20px;}
-.con3>div .border2{width:50px; height:4px; position: relative; top:25px; left:50%; margin-left: -25px; background:#2D2D2D;}
+.con3>div h3::after {content:""; display: block; width:50px; height:4px; position: relative; top:10px; left:50%; margin-left: -25px; background:#2D2D2D;}
 .con3>div p{position:relative; top:40px; left:0; color:#666; font-size:14px;}
 .con3>div a{position:absolute; display:block; top:180px; right: 50%; margin-right: -60px;  width: 120px; background: #333; text-align: center; padding: 7px; color:#fff;  font-size:12px; transition: all 0.3s;}
 .con3>div a:hover {background: #fff; border: solid 1px #333; color:#333;}
@@ -308,6 +313,7 @@ header {width: 90%; }
 header h1 {position: absolute; top:-370px; left: 0px;}
 
 #slider1 {height: 400px;}
+#slider1 .slide_txt {display: none;}
 
 .util {position: absolute; top:-370px; right: 0px;}
 .util li {float: left; }
@@ -316,6 +322,7 @@ header h1 {position: absolute; top:-370px; left: 0px;}
 /*모바일 비쥬얼*/
 .visualMo {display: none;}
 /*2번째 슬라이드*/
+    
 #slider2 {display: none;}
 
 /*content*/
@@ -430,7 +437,7 @@ header .gnb{display: none;}
 .visualMoTxt {position: absolute; top:0px; width: 100%; text-align: center;}
 .visualMoTxt h6{color:#fff; font-family: Times; font-size:15px; font-weight:100; margin-top: 15%; margin-bottom: 2%;}
 .visualMoTxt h4{color:#fff; font-family: Times; font-size:25px; margin-bottom: 4%;}
-.visualMoTxt .border2{width:30px; height:3px; background:#fff; display: inline-block; margin-bottom: 4%;}
+.visualMoTxt h4::after {content:""; display: block; width:30px; height:3px; background:#fff; margin: 4% -15px 0px; position: relative; left: 50%;}
 .visualMoTxt p{color:#fff; font-size:13px; margin-bottom: 7%;}
 .visualMoTxt a{ width: 100px; border: solid 1px #fff; text-align: center; padding: 7px; color:#fff; transition: all 0.5s;}
 .visualMoTxt a:hover{ color:#666; background: #fff;}

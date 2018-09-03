@@ -1,7 +1,25 @@
 $(window).load(function () {
+    //fadein
+    $(window).scroll( function(){
+        $('.fadeinbottom').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','top':'0px',},1000);
+            }
+        });
+         
+    });
+
+
+    
+    
+    //슬라이드 2개
     $("#slider1").mySlider({ //탭박스 이름
         dur: 1000, //속도
-        rolling_dur: 2000, //롤링 시간
+        rolling_dur: 4000, //롤링 시간
         activeName: "on", //활성화시킬 클래스 이름
         panel: ".panel", //슬라이더 ul 이름
         navi: ".navi", //버튼 ul 이름
@@ -12,23 +30,13 @@ $(window).load(function () {
         autoStart: true //자동롤링 시작 유무 true:로딩시 롤링시작 ,  false : 버튼을 클릭해야 롤링시작
     });
 
-    var mySlider = $('.bxslider').bxSlider({
-        mode: 'horizontal', // 가로 방향 수평 슬라이드
-        speed: 500, // 이동 속도를 설정
-        pager: true, // 현재 위치 페이징 표시 여부 설정
-        moveSlides: 1, // 슬라이드 이동시 개수
-        minSlides: 4, // 최소 노출 개수
-        maxSlides: 4, // 최대 노출 개수
-        slideMargin: 5, // 슬라이드간의 간격
+    var slider = $('.bxslider').bxSlider({
         auto: true, // 자동 실행 여부
-        autoHover: true, // 마우스 호버시 정지 여부
         controls: true // 이전 다음 버튼 노출 여부
     });
-
-
     
-
-    var mql = window.matchMedia("screen and (max-width: 300px)");
+    //슬라이드 재호출
+    var mql = window.matchMedia("screen and (max-width: 100px)");
     mql.addListener(function (e) {
         if (!e.matches) {
             slider.reloadSlider();
