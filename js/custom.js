@@ -1,21 +1,5 @@
 $(window).load(function () {
-    //fadein
-    $(window).scroll( function(){
-        $('.fadeinbottom').each( function(i){
-            
-            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            if( bottom_of_window > bottom_of_element ){
-                $(this).animate({'opacity':'1','top':'0px',},1000);
-            }
-        });
-         
-    });
-
-
-    
-    
+        
     //슬라이드 2개
     $("#slider1").mySlider({ //탭박스 이름
         dur: 1000, //속도

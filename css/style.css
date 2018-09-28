@@ -212,7 +212,8 @@ footer {width:940px; margin: 0 auto;}
 .fcon2 {overflow: hidden; border-top: solid 1px; padding: 10px 0px 50px;}
 .fcon2>h2>img {float: left; width: 100px; margin-right: 10px;}
 .fcon2>p {float: left; margin-top: 24px;}
-.fcon2>a {float: right; width: 150px; border: solid 1px #888; font: 11px/1 'Nanum Gothic', sans-serif; color:#888; padding: 7px; margin-top: 24px;}
+.familySite {float: right; width: 150px; border: solid 1px #888; font: 11px/1 'Nanum Gothic', sans-serif; color:#888;  padding: 7px 10px;  margin-top: 24px;}
+.familySite span {float: right;}
 
 
 
